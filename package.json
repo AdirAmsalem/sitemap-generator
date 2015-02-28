@@ -1,0 +1,30 @@
+{
+  "name": "sitemap-generator",
+  "version": "0.1.0",
+  "description": "Sitemap generator for web applications",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdirAmsalem/sitemap-generator"
+  },
+  "keywords": [
+    "sitemap",
+    "seo"
+  ],
+  "author": "Adir Amsalem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdirAmsalem/sitemap-generator/issues"
+  },
+  "homepage": "https://github.com/AdirAmsalem/sitemap-generator",
+  "dependencies": {
+    "bluebird": "^2.9.12",
+    "esprima": "^2.0.0",
+    "glob": "^4.4.1",
+    "lodash": "^3.3.1",
+    "sitemap": "^0.7.4"
+  }
+}
