@@ -7,8 +7,8 @@ module.exports = {
                     (node.callee.type === 'MemberExpression' &&
                     node.callee.object.name === '$stateProvider' &&
                     node.callee.property.name === 'state' &&
-                    node.arguments.length === 2 &&
-                    node.arguments[1].type === 'ObjectExpression')
+                    node.arguments.length && [1, 2].indexOf(node.arguments.length) !== -1 &&
+                    node.arguments[node.arguments.length - 1].type === 'ObjectExpression')
                     ||
                     recursiveSearch(node.callee.object)
                     )
@@ -17,7 +17,7 @@ module.exports = {
             return recursiveSearch(node);
         },
         extractRoute: function(node) {
-            return node.arguments[1].properties
+            return node.arguments[node.arguments.length - 1].properties
                 .filter(function(property) {
                     return property.key.name === 'url';
                 })
